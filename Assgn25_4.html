@@ -1,0 +1,23 @@
+<!--Capitalising the first letter of each word -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Capitalise the first letter of each word</title>
+</head>
+<body>
+	Enter the string:<br>
+	<input type="text" id="inpstr" style="margin: 20px;"><br>
+	<button onclick="capitalise_it(document.getElementById('inpstr').value);" style="margin: 20px;">See magic</button><br>
+	After capitalisation :<br>
+	<div id="improved" style="margin: 20px;"></div>
+	<script type="text/javascript">
+		function capitalise_it(inpstr){
+			var arr = inpstr.split(' ');
+			for(var i=0; i < arr.length; i++){
+				arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1);
+			}
+			return(document.getElementById('improved').innerHTML = arr.join(' '));
+		}
+	</script>
+</body>
+</html>

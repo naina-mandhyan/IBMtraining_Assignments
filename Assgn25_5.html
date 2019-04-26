@@ -1,0 +1,29 @@
+<!-- Picking out the longest word from the string-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Longest word in string</title>
+</head>
+<body>
+	Enter the string:<br>
+	<input type="text" id="inpstr" style="margin: 20px;"><br>
+	<button onclick="long_word(document.getElementById('inpstr').value);" style="margin: 20px;"> click it </button><br>
+	Longest word:<br>
+	<div id="long" style="margin: 20px;"></div>
+	<script>
+	function long_word(inpstr) {
+    var arr = inpstr.split(" ");
+    var longest = 0;
+    var word = null;
+    arr.forEach(function(arr) {
+        if (longest < arr.length) {
+            longest = arr.length;
+            word = arr;
+        }
+    });
+    return (document.getElementById('long').innerHTML = word);
+}
+//console.log(longestWord("happy or sad"));
+</script>
+</body>
+</html>

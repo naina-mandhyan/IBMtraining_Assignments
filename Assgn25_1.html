@@ -1,0 +1,24 @@
+<!--This program checks whether the random generated number and guessed number by the user are same or not -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Guess</title>
+</head>
+<body>
+	<button onclick="takeguess()">take a guess</button>
+	<script type="text/javascript">
+
+		function takeguess()
+		{
+			var ran = (Math.floor(Math.random() * 10)+1);
+			//alert(ran);
+			var inp = prompt("enter a number between 0-10");
+			if(ran == inp)
+				alert("match found");
+			else
+				alert("not matched");
+		}
+	</script>
+
+</body>
+</html>

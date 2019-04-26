@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function merge() {
+    const obj = {};
+    for (var i = 0; i < arguments.length; i++) {
+        var keys = arguments[i];
+        for (var j = 0; j < keys.length; j++) {
+            obj[keys[j]] = keys[j];
+        }
+    }
+    return Object.values(obj);
+}
+console.log(merge([1,2,3], [2,30,1]));
+		//function merge() {
+    //const obj = {};
+    //for (let i = 0; i < arguments.length; i++) {
+        //let keys = arguments[i];
+        //for (let j = 0; j < keys.length; j++) {
+        //    obj[keys[j]] = keys[j];
+       // }
+    //}
+   // return Object.values(obj);
+//}
+//console.log(merge([1,2,3], [2,30,1]));//
+	</script>
+
+</body>
+</html>

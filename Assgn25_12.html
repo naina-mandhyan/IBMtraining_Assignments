@@ -1,0 +1,25 @@
+<!--clock display-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>clock</title>
+</head>
+<body>
+  	<p id = "display" style="font-family: Georgia; font-size: 18px;"></p>
+    <script type="text/javascript">
+          var today = new Date();
+          var day = today.getDay();
+          var weekday = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+          document.getElementById('display').innerHTML = "Today is : " + weekday[day];
+          var hour = today.getHours();
+          var minute = today.getMinutes();
+          var second = today.getSeconds();
+          var ampm, hour;
+          if(hour >= 12)
+            ampm=" PM ";
+          else
+            ampm=" AM ";
+          document.getElementById('display').innerHTML += "<br>Current Time : "+hour + ampm + " : " + minute + " : " + second;
+      </script>
+</body>
+</html>

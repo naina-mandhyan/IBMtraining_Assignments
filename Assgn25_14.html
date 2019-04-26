@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="str" placeholder="Enter the string"><input type="text" id="begstr" placeholder="Enter the starting to check"><br><br>
+	<button onclick="begString(document.getElementById('str').value , document.getElementById('begstr').value)"> click to check</button><br>
+	<p id="display"></p>
+	<script type="text/javascript">
+		function begString( str, begstr ){
+			var strarr = str.split('');
+			var begarr = begstr.split('');
+			for (var i = 0; i < begarr.length; i++) {
+				if( begarr[i] == strarr[i] )
+					var flag = 1;
+				else
+					var flag = 0;	
+			}
+			if (flag == 1)
+				document.getElementById('display').innerHTML = "Entered string begin with the given substring";
+			else
+				document.getElementById('display').innerHTML = "Entered string does not begin with the given substring";
+		}
+		//console.log(begString('iteration','it'));
+	</script>
+</body>
+</html>

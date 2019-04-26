@@ -1,0 +1,34 @@
+<!--Arranging the letters in a string in alphabetical order -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arranging the letters</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container" style="padding: 20px; margin: 20px;">
+	Enter the string:<br>
+	<input type="text" id="inpstr" style="margin: 20px;"><br>
+	<button onclick="order_string(document.getElementById('inpstr').value);" style="margin: 20px;">arrange it</button><br>
+	Alphabetical order :<br>
+	<div id="sorted" style="margin: 20px;"></div>
+	<script type="text/javascript">
+		function order_string(inpstr)
+		{
+  			var arr = inpstr.split('');
+  			var temp;
+  			for(var i = 0; i < arr.length; i++){
+    			for(var j = i + 1; j < arr.length; j++){
+       				if(arr[i] > arr[j]){
+        			temp = arr[i];
+        			arr[i] = arr[j];
+        			arr[j] = temp;
+        			}
+        		}
+  			}
+  			return(document.getElementById("sorted").innerHTML = arr.join(''));
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!--This program takes the input string and an index number from the user and checks if the letter at that index is upper case or not.. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="str" placeholder="Input a string"><input type="text" id="index" placeholder="enter the index number"><br><br>
+	<button onclick="checkCaseAt(document.getElementById('str').value , document.getElementById('index').value)"> click to check</button><br>
+	<p id="display"></p>
+	<script type="text/javascript">
+		function checkCaseAt( str, index){
+			var tocheck = str.charAt(index);
+			if ( tocheck >= 'A' && tocheck <= 'Z' )
+				document.getElementById('display').innerHTML = "It is Upper case Letter";
+			else
+				document.getElementById('display').innerHTML = "It is not Upper case Letter"
+		}
+		//console.log(checkCaseAt('nainAmandhYan',11));
+	</script>
+</body>
+</html>
