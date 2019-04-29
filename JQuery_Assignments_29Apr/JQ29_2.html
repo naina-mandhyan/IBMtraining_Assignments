@@ -1,0 +1,22 @@
+<!-- Making second word of every division in bold-->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div>the first div</div>
+<div>the second div</div>
+<script>
+$(document).ready(function(){
+$("div").each(function() { 
+  var divText = $(this).text();
+  var splt = divText.split(' ');
+  var x = "<strong>" + splt[1] + "</strong>";
+  splt[1] = x;
+  $(this).html(splt.join(" "));
+});
+});
+</script>
+</body>
+</html>

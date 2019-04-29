@@ -1,0 +1,24 @@
+<!-- Adding 3 elemnts in the Unorderd List using jQuery-->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="ulDiv">
+		<ul>
+			<li>existing item 1</li>
+			<li>existing item 2</li>
+		</ul>
+		<button> Click to add more items</button>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+			$("#ulDiv ul").append("<li>new item 1</li>");
+			$("#ulDiv ul").append("<li>new item 2</li>");
+			$("#ulDiv ul").append("<li>new item 3</li>");
+		});
+		});
+	</script>
+</body>
+</html>

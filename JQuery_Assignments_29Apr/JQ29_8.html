@@ -1,0 +1,28 @@
+<!--Writing in an empty span-->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<span></span>
+	<button>Click here to write in empty span</button>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			// one way to write in empty span.
+			/*
+			alert("Filling the empty span using JQuery");
+			$("span").text("This text is written using JQuery directly on loading of document");
+			*/
+
+			// second way to fill empty span.
+			
+			$("button").click(function() {
+				$("span").html("This text is written using JQuery on click of a button");
+			});
+			
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- Appending the inner html of a paragraph on click of a button-->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<button>click to append</button>
+	<p id="paraSampleText">this is existing text..</p>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+			$("#paraSampleText").append('this is the appending text..');	
+			});
+			
+		});
+	</script>
+</body>
+</html>

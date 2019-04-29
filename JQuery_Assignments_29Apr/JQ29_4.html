@@ -1,0 +1,25 @@
+<!--Removing all the options of a select box on a button click and then adding one option. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<select id="mySelect" name=dropdownList>
+    	<option value="op1">HTML</option>
+    	<option value="op2">CSS</option>
+    	<option value="op3">Javascript</option>
+    	<option value="op4">NodeJs</option>
+    	<option value="op5">AngularJs</option>                    
+	</select>
+	<br>
+	<button>Click to renew the list</button>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				$('#mySelect').find('option').remove().end().append('<option value="op1">NewItem</option>').val('op1');
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!--Removing all the css properties from a particular div-->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		.targetDiv, .nontargetDiv{
+			background-color: grey;
+			color: red;
+			height: 150px;
+			width: 100%;
+			font-family: Georgia;
+			font-size: 36px;
+			font-style: italic;
+			border: 2px solid black;
+			}
+	</style>
+	<div class="targetDiv">
+		This is the text designed using CSS. And styling is removed using JQuery. Observe the changes. 
+	</div>
+	<div class="nontargetDiv">
+		This is also the text designed using CSS. But styling is removed from above division only using the JQuery. This one remains unchanged. 
+	</div><br>
+	<center>
+	<button style="height: 50px; text-align: center;">Click on div see the stated changes..</button>
+	</center>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("div").click(function(){
+				//if we keep the classname for both the div same, then changes will be visible on both the div hen clicked.
+				$(this).removeClass('targetDiv');
+			});			
+		});
+	</script>
+</body>
+</html>
