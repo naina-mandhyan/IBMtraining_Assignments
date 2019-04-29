@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highlighting the bold text in para</title>
+</head>
+<body>
+	<p style="font-family: Georgia; font-size: 18px;"> This is a html code with <strong> javascript </strong>. Its good to play around with these <strong> features </strong>.</p>
+	<button onclick="focusBold()">Click here to highlight bold text above</button>
+	<script>
+		function focusBold () {
+			var boldText = document.getElementsByTagName('strong');
+			for( var i = 0; i < boldText.length; i++){
+				boldText[i].style.background = "yellow";
+			}	
+		}
+	</script>
+</body>
+</html>

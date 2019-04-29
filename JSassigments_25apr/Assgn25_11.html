@@ -1,0 +1,27 @@
+<!--this code takes the input sentence and the word to count its occurence in the sentence and returns the number of times as count.. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="str" placeholder="write a sentence"><input type="text" id="word" placeholder="type the word to count"><br><br>
+	<button onclick="wordOccurence(document.getElementById('str').value , document.getElementById('word').value)"> click to count</button><br>
+	<p id="display"></p>
+	<script type="text/javascript">
+		function wordOccurence ( str , word){
+			var strarr = str.split(' ');
+			var wordarr = word.split(' ');
+			var count = 0;
+			for (var i = 0; i < strarr.length; i++) {
+				if ( wordarr[0] == strarr[i] )
+					count++;
+			}
+			
+			document.getElementById('display').innerHTML = count;
+		}
+		//console.log(wordOccurence("this is test to test the code","test"));
+	</script>
+
+</body>
+</html>
