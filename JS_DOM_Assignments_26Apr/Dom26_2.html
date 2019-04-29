@@ -1,0 +1,17 @@
+<!--Replacing the content of the body by user given new input on click of a button-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Replacing the content of the body</title>
+</head>
+<body>
+	<p id="display">Hi this is old text</p>
+	<button onclick="change_content()">Try It</button>
+	<script type="text/javascript">
+		function change_content(){
+			var new_data = prompt("type the new content here");
+			document.getElementById('display').innerHTML = new_data;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!--Displaying the last modified date and time-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the date and time this document was last modified.</p>
+
+<button onclick="modifiedLastAt()">Try it</button>
+
+<p id="display"></p>
+
+<script>
+function modifiedLastAt() {
+  var x = document.lastModified;
+  document.getElementById("display").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

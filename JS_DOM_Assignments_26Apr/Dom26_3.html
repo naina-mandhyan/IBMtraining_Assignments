@@ -1,0 +1,27 @@
+<!--Displaying the address of the current open page in the browser-->
+<!DOCTYPE html>
+<html>
+<body>
+<p><a id="getlink" href="#top">current address</a>
+
+<!-- Other address related methods..
+<p><a id="myAnchor" href="default.html">Learning</a></p>
+
+<p><a id="getlink" href="https://www.google.com/nature">Google nature images</a></p>
+</p>-->
+
+<p>Click the button to display the value of the href attribute of the link above.</p>
+
+<button onclick="displayLink()">Try it</button>
+
+<p id="display"></p>
+
+<script>
+function displayLink() {
+  var x = document.getElementById("getlink").href;
+  document.getElementById("display").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

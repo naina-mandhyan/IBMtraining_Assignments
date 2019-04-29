@@ -1,0 +1,15 @@
+<!--Adding the n no. of text boxes in the division-->
+<!DOCTYPE html>
+<html>
+<body>
+	<div id="dynamicDiv"></div>
+	<script type="text/javascript">
+		var n = prompt ("tell the no. of text boxes to insert");
+		for ( var i=0 ; i < n ; i++ ){
+			var newTextbox = document.createElement("input");
+			newTextbox.type = "text";
+			document.getElementById('dynamicDiv').appendChild(newTextbox);
+		}
+	</script>
+</body>
+</html>

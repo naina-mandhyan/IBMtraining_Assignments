@@ -1,0 +1,25 @@
+<!--Removing the value of the drop down menu which is entered by the user--> 
+<!DOCTYPE html>
+<html>
+<body>
+  <select id="droplist" name="list" size="1" >
+     <option value="op1">HTML</option>
+     <option value="op2">CSS</option>
+     <option value="op3">Javascript</option>
+     <option value="op4">NodeJs</option>
+     <option value="op5">AngularJs</option>                    
+  </select>
+  <br><br>
+  <button onclick="removeItem()">click to delete a value</button>
+<script>
+function removeItem(){
+var item = prompt("Enter value");
+ var chooseOption = document.getElementById("droplist");
+  for (var i = 0; i < chooseOption.length; i++){
+  if (chooseOption.options[i].innerHTML == item )
+     chooseOption.remove(i);
+  }
+}
+</script>
+</body>
+</html>

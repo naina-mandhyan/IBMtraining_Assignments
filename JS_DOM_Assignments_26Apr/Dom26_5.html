@@ -1,0 +1,29 @@
+<!--Disabling and enabling the drop down list on click of the button-->
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function disable() {
+  document.getElementById("fruitList").disabled=true;
+}
+function enable() {
+  document.getElementById("fruitList").disabled=false;
+}
+</script>
+</head>
+<body>
+
+<form>
+<select id="fruitList">
+  <option>Apple</option>
+  <option>Pear</option>
+  <option>Banana</option>
+  <option>Orange</option>
+</select>
+<br><br>
+<input type="button" onclick="disable()" value="Disable list">
+<input type="button" onclick="enable()" value="Enable list">
+</form>
+
+</body>
+</html>
