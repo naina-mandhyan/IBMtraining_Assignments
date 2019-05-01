@@ -1,0 +1,34 @@
+<!--Focussing the disabled elements on button click-->
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <input type="text" class="grp" placeholder="Full name">
+  <br>
+  <input type="email" class="grp" placeholder="Email" disabled>
+  <br>
+  <input type="password" class="grp" placeholder="password" disabled>
+  <br>
+  <input type="text" class="grp" placeholder="address">
+  <br>
+  <button id="btn1" class="grp" disabled>Submit</button>
+  <button id="btn2" class="grp">Reset</button><br>
+  <button id="btn3">Click to focus the disabled</button>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $("#btn3").click(function(){
+          //alert("");
+          //$('input:disabled').css('background-color','orange');
+
+          $.each($('.grp'), function(){
+					if($(this).prop('disabled')){
+						$(this).css('background-color', 'orange');
+					}
+				});
+        });
+      });
+  </script>
+</body>
+</html>

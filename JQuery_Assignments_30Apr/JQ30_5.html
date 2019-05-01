@@ -1,0 +1,26 @@
+<!--Delaying in animation queue-->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+		<button class="myButton">Click to start</button>
+		<div class="newDiv" style="border: 1px solid #000; background-color: pink; margin-right: 0px; padding: 10px; position: absolute; width: 100px; height: 80px;">
+			Delay in animation queues..
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".myButton").click(function() {
+			//Using queue animations
+				$(".newDiv").animate({height: '200px'}, 'slow').delay(2000);
+				$(".newDiv").animate({opacity: '0.2'}, 'slow').delay(2000);
+				$(".newDiv").animate({width: '200px'}, 'slow').delay(2000);
+				$(".newDiv").animate({height: '80px'}, 'slow').delay(2000);
+				$(".newDiv").animate({opacity: '1'}, 'slow').delay(2000);
+				$(".newDiv").animate({width: '100px'}, 'slow').delay(2000);
+				});
+			});
+		</script>
+</body>
+</html>

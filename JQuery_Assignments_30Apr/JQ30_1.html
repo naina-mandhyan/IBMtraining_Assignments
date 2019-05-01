@@ -1,0 +1,21 @@
+<!--Removing all spans from the html document-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>this is paragraph 1 </p>
+    <p>this is para 2</p>
+    <span> this is span 1</span>
+    <span> this is span2</span>
+    <button type="button" name="button"> Click to delete spans..</button>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("button").click(function(){
+          $('span').remove().end();
+        });
+      });
+    </script>
+  </body>
+</html>

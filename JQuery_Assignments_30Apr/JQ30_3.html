@@ -1,0 +1,22 @@
+<!--Moving the element form one div to another-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="source" style="background-color: pink; height: 100px; width: 200px;">
+      <h5>Div 1</h5>
+      <button id="btn1"> move me </button><br>
+      <button id="btn2"> try it too</button>
+    </div>
+    <div id="destination" style="background-color: blue; height: 100px; width: 200px;"><h5> Div 2<h5></div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("button").click(function(){
+          $(this).detach().appendTo('#destination');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!--Making the first letter of each word Uppercase on mouseout event-->
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<label>Enter the text :</label>
+	<input type="text" id="text1">
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$("#text1").mouseout(function()
+		{
+		   var arr = $("#text1").val().split(' ');
+		   console.log(arr[0].charAt(0).toUpperCase());
+		   for (var i = 0; i < arr.length; i++)
+		   	$("#text1").val($("#text1").val().replace(arr[i], arr[i].charAt(0).toUpperCase()+arr[i].substring(1)));
+		});
+	});
+</script>
+</body>
+</html>

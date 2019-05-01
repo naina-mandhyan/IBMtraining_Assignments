@@ -1,0 +1,40 @@
+<!--printing the first column of the table-->
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <table border="2" style="height:300px; width:300px;">
+    <tr class="tableRow">
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+      <td>Cell 3</td>
+    </tr>
+    <tr class="tableRow">
+      <td>Cell 4</td>
+      <td>Cell 5</td>
+      <td>Cell 6</td>
+    </tr>
+    <tr class="tableRow">
+      <td>Cell 7</td>
+      <td>Cell 8</td>
+      <td>Cell 8</td>
+    </tr>
+  </table>
+  <button>Click Here</button><br>
+  <div></div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("button").click(function(){
+        alert("Getting the elements of first column..");
+        $.each($('tr'),function(){
+          $('div').append($(this).find('td:first').text() + "<br>");
+
+        });
+      });
+    });
+  </script>
+</body>
+</html>

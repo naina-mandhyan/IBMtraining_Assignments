@@ -1,0 +1,48 @@
+<!--Appennding new row dynamically-->
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <table border="2" style="height:300px; width:300px;">
+    <tr class="tableRow">
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+      <td>Cell 3</td>
+    </tr>
+    <tr class="tableRow">
+      <td>Cell 4</td>
+      <td>Cell 5</td>
+      <td>Cell 6</td>
+    </tr>
+    <tr class="tableRow">
+      <td>Cell 7</td>
+      <td>Cell 8</td>
+      <td>Cell 9</td>
+    </tr>
+  </table>
+  <button>Click to add a new row</button><br>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("button").click(function(){
+        alert("Adding a new row dynamically..");
+
+        var n = $('tr:first td').length;
+        console.log(n);
+        var arr;
+        var i=0 ;
+        //adding a new row
+        $('table').append("<tr></tr>")
+        while( i < n ){
+          //alert("i="+i);
+          //taking the input for each cell of new row.
+          arr = prompt("enter value for new cell");
+          $('tr:last').append("<td>"+ arr +"</td>");
+          i += 1;
+        }
+      });
+    });
+  </script>
+  </body>
+  </html>

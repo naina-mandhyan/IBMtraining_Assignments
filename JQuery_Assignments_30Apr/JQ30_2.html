@@ -1,0 +1,28 @@
+<!--Limiting the characters in a text area and dislating the count of the remaining characters-->>
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<textarea name="inp1" maxlength="19"></textarea>
+	<p></p>
+	<p class="p1"></p>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var i=19;
+
+			$("textarea").keypress(function(){
+				if(i>0)
+				{
+					var n = $("textarea").val().length  ;
+					//$("p").text(n);
+					var x = i-n;
+  					$(".p1").text(x + " characters left");
+  				}
+			});
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!--Displaying the selected item of the combobox in alert-->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<select id = "selectItem">
+    <option>HTML</option>
+    <option>CSS</option>
+    <option>Javascript</option>
+    <option>NodeJs</option>
+    <option>AngularJs</option>
+	</select>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#selectItem").change(function() {
+			var choice = $(this).children('option:selected').val();
+			alert("Selected course : " +choice);
+		});
+	});
+</script>
+</body>
+</html>

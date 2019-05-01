@@ -1,0 +1,26 @@
+<!--Focussing the first input box of the form-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <form id="form1">
+		<input type="text" placeholder="Full name">
+    <br>
+		<input type="email" placeholder="Email">
+    <br>
+		<input type="password" placeholder="password">
+    <br>
+		<input type="text" placeholder="address">
+    <br>
+  	<button>Submit</button>
+	  </form>
+		<script type="text/javascript">
+			$(document).ready(function(){
+          alert("Focus to the first input box is already set using JQuery !");
+					$("input:first").focus().css("background-color","yellow");
+			});
+		</script>
+  </body>
+</html>

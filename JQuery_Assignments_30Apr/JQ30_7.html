@@ -1,0 +1,25 @@
+<!--Counting the number of option in a combo select-->
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <select id="selectMenu" name=dropdownList>
+    	<option value="op1">HTML</option>
+    	<option value="op2">CSS</option>
+    	<option value="op3">Javascript</option>
+    	<option value="op4">NodeJs</option>
+    	<option value="op5">AngularJs</option>
+	</select><br>
+  <button class="btn1">Click to see the count of options</button><br>
+  <p></p>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $('.btn1').click(function(){
+          //alert("hi");
+        var n = $("#selectMenu option").length;
+        $("p").text(n);
+      });
+      });
+  </script>
