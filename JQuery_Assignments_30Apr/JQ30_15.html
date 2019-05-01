@@ -1,0 +1,36 @@
+<!--Openening a new window and checking it status whether it is still open or not-->
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="open_newWindow();">Click to open new window</button>
+    <button onclick="checkPrevious();">check status</button>
+    <button onclick="close_newWindow()">Close</button>
+    <script type="text/javascript">
+      var newWindow = null;
+      var flag;
+function open_newWindow()
+{
+    if ((newWindow == null) || (newWindow.closed))
+    {
+        flag = 1;
+        newWindow = window.open('','newWindow','height=300,width=200');
+
+    }
+
+  }
+  function close_newWindow()
+  {
+    newWindow.close();
+    flag = 0;
+  }
+  function checkPrevious(){
+    if(flag == 1)
+      alert("Previous window is still open");
+    else {
+      alert("Previous window closed")
+    }
+
+  }
+    </script>
+  </body>
+</html>
