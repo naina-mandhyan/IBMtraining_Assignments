@@ -1,0 +1,37 @@
+<html>
+    <body>
+
+        <button onclick="exmResult()">click to check the exam result</button>
+        <script>
+            function resultCalc()
+            {
+                var sub1 = parseInt(prompt("enter the marks for subject 1"));
+                var sub2 = parseInt(prompt("enter the marks for subject 2"));
+                var sub3 = parseInt(prompt("enter the marks for subject 3"));
+                var total = sub1 + sub2 + sub3;
+                console.log(total);
+                if(total < 125)
+                    return(0);
+                if(sub1<40)
+                    return(0);
+                if(sub2<40)
+                    return(0);
+                if(sub3<40)
+                    return(0);
+                
+                //return(1);
+            }    
+
+            function exmResult()
+            {
+                //alert("");
+                var res = resultCalc();
+                if(res == 0)
+                    alert("failed in exam");
+                else
+                    alert("passed the exam");
+            }
+
+        </script>
+    </body>
+</html>
