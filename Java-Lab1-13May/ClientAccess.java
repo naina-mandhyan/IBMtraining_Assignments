@@ -1,5 +1,3 @@
-import java.util.Date;
-
 abstract class Items{
 	private String u_ID;
 	private String title;
