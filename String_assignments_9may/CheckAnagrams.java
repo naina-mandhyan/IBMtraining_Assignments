@@ -11,7 +11,7 @@ class CheckAnagrams{
 		String[] strarr2 = str2.split("");
 		String sortStr1 = new CheckAnagrams().sortString(strarr1);
 		String sortStr2 = new CheckAnagrams().sortString(strarr2);
-		if(sortStr1.equals(sortStr2))
+		if(sortStr1.equalsIgnoreCase(sortStr2))
 			System.out.println("These are anagrams");
 		else
 			System.out.println("These are not anagrams");
