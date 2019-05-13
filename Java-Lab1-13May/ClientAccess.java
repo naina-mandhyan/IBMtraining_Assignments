@@ -43,7 +43,6 @@ class Book extends WrittenItems{
 	void getAuthor(){
 		System.out.println("Author: " + author);
 	}
-
 }
 
 class JournalPaper extends WrittenItems{
@@ -110,7 +109,6 @@ class ClientAccess{
 		vd1.setReleaseYear(2018);
 		vd1.getItem("Video");
 		vd1.getReleaseYear();
-
 	}
 
 }
