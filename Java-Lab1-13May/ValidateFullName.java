@@ -8,9 +8,14 @@ class MyException extends Exception{
 
 class ValidateFullName{
 	
-	public static void main(String[] args) throws MyException{
+	public static void main(String[] args){
 		ValidateFullName obj = new ValidateFullName();
-		obj.validateFunc();
+		try{
+			obj.validateFunc();
+		}
+		catch(MyException e){
+			System.out.println(e);
+		}
 		
 	}
 
