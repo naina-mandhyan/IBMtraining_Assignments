@@ -9,8 +9,17 @@ class EmployeeException extends Exception{
 
 public class EmployeeSalary{
 
-	public static void main(String[] args) throws EmployeeException {
-			
+	public static void main(String[] args){
+		EmployeeSalary empExp = new EmployeeSalary();
+		try{
+			empExp.checkSal();
+		}
+		catch(EmployeeException e){
+			System.out.println(e);
+		}
+	}
+	
+	void checkSal() throws EmployeeException{
 		System.out.println("Enter your salary");
 		Scanner scan = new Scanner(System.in);
 		int sal = scan.nextInt();
@@ -19,5 +28,4 @@ public class EmployeeSalary{
 		else
 			System.out.println("Getting benefits suggestions...");
 	}
-	
 }
