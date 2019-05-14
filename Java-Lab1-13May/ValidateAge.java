@@ -7,8 +7,18 @@ class MyExceptions extends Exception{
 }
  
 class ValidateAge{
-    public static void main(String[] args) throws MyExceptions {
-       java.util.Scanner scan = new java.util.Scanner(System.in);
+    public static void main(String[] args){
+       ValidateAge obj = new ValidateAge();
+      try{
+        obj.checkAge();
+      }
+      catch(MyExceptions e){
+        System.out.println(e);
+      }
+    }
+
+    void checkAge() throws MyExceptions{
+      java.util.Scanner scan = new java.util.Scanner(System.in);
        System.out.println("Enter your age to proceed");
        int age = scan.nextInt();
  
@@ -17,6 +27,6 @@ class ValidateAge{
         }
 
         else
-        	System.out.println("Congratulations... You can complete further steps.");
+          System.out.println("Congratulations... You can complete further steps.");
     }
 }
