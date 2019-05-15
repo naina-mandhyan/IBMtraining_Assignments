@@ -155,7 +155,7 @@ class LaptopDetailsAPI{
 
 		System.out.println("Update more ?? (yes/no)");
 		ch = scan.next();
-		}while(ch.equals("y"));
+		}while(ch.equals("yes"));
 	}
 
 	void searchList(ArrayList list){
