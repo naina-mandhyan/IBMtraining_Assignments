@@ -1,5 +1,5 @@
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.util.Scanner;
 
 class GetFileDetails{
 	public static void main(String[] args) {
