@@ -123,6 +123,7 @@ public class UserChoice {
 				String result = service.viewTransactions(accNo);
 				System.out.println("Transfer Type -- Transfered Amount -- Date and Time");
 				System.out.println(result);
+				walletServices(service, accNo);
 				break;
 			case 6:
 				break;
